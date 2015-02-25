@@ -2,7 +2,7 @@
 
 scroll to top of page
 
-## example
+## Usage
 
 ```
 <top-bar options="options"></top-bar>
@@ -13,6 +13,16 @@ angular.module('demo', ['ngTopPage', function (){}])
       speed: 15
     }
   }])
+```
+
+## Pull Request
+
+```
+git clone git@github.com:angular-box/ngTopPage.git
+cd ngTopPage
+npm install
+bower install
+gulp serve
 ```
 
 ## Todo
