@@ -5,6 +5,12 @@ scroll to top of page
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
+## Install
+
+`
+bower install --save ng-top-page
+`
+
 ## Usage
 
 ```
