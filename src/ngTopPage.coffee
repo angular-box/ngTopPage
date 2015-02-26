@@ -10,6 +10,7 @@ angular.module 'ngTopPage', []
 
     opts = angular.extend(defaultOpts, scope.options)
 
+    # 回到头部
     scope.backTop = () ->
       top = currentTop()
       step = Math.round(top / opts.speed)
@@ -27,11 +28,26 @@ angular.module 'ngTopPage', []
           , timer)
         )(i, timer)
 
-    currentTop = () ->
+    # 计算当前的位置
+    scope.currentTop = currentTop = () ->
       return this.pageYOffset
 
-    window.onscroll = () ->
+    # 判断是否已超时
+    scrollTimeout = true
+    window.onscroll = (event) ->
+      scrollTimeout = false
+      scope.pageYOffset = currentTop()
       element.eq(0).addClass('open')
+
+      if scope.pageYOffset <= 0
+        element.eq(0).removeClass('open')
+
+    setInterval(() ->
+      if scrollTimeout
+        element.eq(0).removeClass('open')
+      else
+        scrollTimeout = true
+    , 3000)
 
   return {
     link: link

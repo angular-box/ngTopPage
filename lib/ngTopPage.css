@@ -1,10 +1,48 @@
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
 .top_bar_icon {
   position: fixed;
   right: 20px;
   bottom: 40px;
   width: 42px;
   height: 42px;
-  display: none;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
   background: url(../images/top.png); }
   .top_bar_icon.open {
-    display: block; }
+    opacity: 1;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn; }

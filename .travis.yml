@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "0.10"
+
+before_script:
+  - npm install -g gulp bower
+  - bower install
+  - npm install
+
+after_script:
+  - cat ./coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+env:
+  - TREE_CI_ENV=travis

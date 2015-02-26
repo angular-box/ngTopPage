@@ -25,8 +25,14 @@ bower install
 gulp serve
 ```
 
+## Test
+
+```
+gulp test
+```
+
 ## Todo
 
-* Add top icon show opacity
 * Add scroll bottom
 * Add unit test
+* Scroll anywhere
