@@ -48,7 +48,7 @@ gulp test
 * Add scroll bottom
 * Scroll anywhere
 
-[travis-image]: https://travis-ci.org/boiawang/angular-box/ngTopPage
+[travis-image]: https://travis-ci.org/angular-box/ngTopPage.svg
 [travis-url]: https://travis-ci.org/angular-box/ngTopPage
 [coveralls-image]: https://img.shields.io/coveralls/angular-box/ngTopPage.svg?style=flat
 [coveralls-url]: https://coveralls.io/r/angular-box/ngTopPage?branch=master

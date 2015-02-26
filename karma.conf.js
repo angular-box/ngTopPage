@@ -34,7 +34,7 @@ module.exports = function(config) {
     preprocessors: {
       'test/**/*.coffee': ['coffee'],
 
-      'src/**/*.coffee': ['coverage']
+      'lib/ngTopPage.js': ['coverage']
     },
 
     coverageReporter: {
