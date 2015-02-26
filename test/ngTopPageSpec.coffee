@@ -12,7 +12,7 @@ describe('ngTopPage', () ->
 
   describe('render', () ->
     beforeEach(() ->
-      element = $compile('<top-bar options="options"></top-bar>')($rootScope)
+      element = $compile('<ng-top-bar options="options"></ng-top-bar>')($rootScope)
       $rootScope.$digest()
     )
 
@@ -29,7 +29,7 @@ describe('ngTopPage', () ->
       $rootScope.currentTop = () ->
         return window.pageYOffset
 
-      element = $($compile('<top-bar options="options"></top-bar>')($rootScope))
+      element = $($compile('<ng-top-bar options="options"></ng-top-bar>')($rootScope))
       $('body').height(5000)
       $rootScope.$digest()
     )
