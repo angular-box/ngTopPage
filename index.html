@@ -1,1 +1,28 @@
-My Page
+<html ng-app="demo">
+  <head>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/ngTopPage.js"></script>
+    <link href="lib/ngTopPage.css" rel="stylesheet" />
+    <style>
+      .h600 {
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body ng-controller="topPageCtrl">
+    <top-bar options="options"></top-bar>
+
+    <div class="h600">111</div>
+    <div class="h600">222</div>
+    <div class="h600">333</div>
+
+    <script>
+      angular.module('demo', ['ngTopPage', function (){}])
+        .controller('topPageCtrl', ['$scope', function ($scope) {
+          $scope.options = {
+            speed: 15
+          }
+        }])
+    </script>
+  </body>
+</html>
