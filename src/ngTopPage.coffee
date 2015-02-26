@@ -8,6 +8,9 @@ angular.module 'ngTopPage', []
       speed: 20
     }
 
+    if not attrs.scroll
+      attrs.scroll = window
+
     opts = angular.extend(defaultOpts, scope.options)
 
     # 回到头部
@@ -24,23 +27,28 @@ angular.module 'ngTopPage', []
 
         ((i, timer) ->
           setTimeout(() ->
-            window.scrollTo(0, i)
+            angular.element(attrs.scroll).scrollTop(i)
           , timer)
         )(i, timer)
 
     # 计算当前的位置
     scope.currentTop = currentTop = () ->
-      return this.pageYOffset
+      return angular.element(attrs.scroll).scrollTop()
 
     # 判断是否已超时
     scrollTimeout = true
-    window.onscroll = (event) ->
-      scrollTimeout = false
-      scope.pageYOffset = currentTop()
-      element.eq(0).addClass('open')
 
-      if scope.pageYOffset <= 0
-        element.eq(0).removeClass('open')
+    setTimeout(() ->
+      angular.element(attrs.scroll).bind('scroll', () ->
+        scrollTimeout = false
+        scope.pageYOffset = currentTop()
+        element.eq(0).addClass('open')
+
+        # console.log element, 6
+        if scope.pageYOffset <= 0
+          element.eq(0).removeClass('open')
+      )
+    , 10)
 
     setInterval(() ->
       if scrollTimeout

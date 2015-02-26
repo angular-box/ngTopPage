@@ -14,9 +14,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'lib/jquery.js',
       'lib/angular.min.js',
       'lib/angular-mocks.js',
-      'lib/jquery.js',
 
       'lib/ngTopPage.js',
 
@@ -38,8 +38,12 @@ module.exports = function(config) {
     },
 
     coverageReporter: {
-      type: 'html',
-      dir: 'coverage/'
+      // type: 'lcov',
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: 'report-lcov' }
+      ]
     },
 
     coffeePreprocessor: {

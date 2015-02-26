@@ -18,7 +18,8 @@
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: fadeOut;
-  background: url(../images/top.png);
+  background-image: url(../images/top.png);
+  background-repeat: no-repeat;
 
   &.open {
     opacity: 1;

@@ -39,7 +39,8 @@
   animation-fill-mode: both;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
-  background: url(../images/top.png); }
+  background-image: url(../images/top.png);
+  background-repeat: no-repeat; }
   .top_bar_icon.open {
     opacity: 1;
     -webkit-animation-duration: 1s;

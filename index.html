@@ -1,5 +1,6 @@
 <html ng-app="demo">
   <head>
+    <script src="lib/jquery.js"></script>
     <script src="lib/angular.min.js"></script>
     <script src="lib/ngTopPage.js"></script>
     <link href="lib/ngTopPage.css" rel="stylesheet" />
@@ -7,10 +8,16 @@
       .h600 {
         height: 600px;
       }
+      .left {
+        float: left;
+      }
+      .w48 {
+        width: 48%;
+      }
     </style>
   </head>
   <body ng-controller="topPageCtrl">
-    <top-bar options="options"></top-bar>
+    <ng-top-bar options="options"></ng-top-bar>
 
     <div class="h600">111</div>
     <div class="h600">222</div>
