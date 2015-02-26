@@ -2,8 +2,8 @@
 // Generated on Wed Feb 25 2015 23:21:30 GMT+0800 (CST)
 
 module.exports = function(config) {
-  config.set({
 
+  configuration = {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -14,9 +14,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'lib/jquery.js',
       'lib/angular.min.js',
       'lib/angular-mocks.js',
-      'lib/jquery.js',
 
       'lib/ngTopPage.js',
 
@@ -38,8 +38,12 @@ module.exports = function(config) {
     },
 
     coverageReporter: {
-      type: 'html',
-      dir: 'coverage/'
+      // type: 'lcov',
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: 'report-lcov' }
+      ]
     },
 
     coffeePreprocessor: {
@@ -80,9 +84,22 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  });
+
+  }
+
+  if(process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
+  }
+
+  config.set(configuration);
 };

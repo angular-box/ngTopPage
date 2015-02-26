@@ -20,6 +20,7 @@ gulp.task 'style', () ->
 
 gulp.task 'copy', ['script', 'style'], () ->
   gulp.src([
+    'bower_components/jquery/dist/jquery.js'
     'bower_components/angular/angular.min.js'
     'bower_components/angular/angular.min.js.map'
     'bower_components/angular-mocks/angular-mocks.js'

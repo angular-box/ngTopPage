@@ -1,6 +1,6 @@
 {
   "name": "ngTopPage",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "angular topPage",
   "main": "dist/topPage.js",
   "scripts": {
@@ -10,7 +10,14 @@
     "angular",
     "contextmenu"
   ],
-  "author": "boia <zhengwang2314@gmail.com> (http://www.boiajs.com/)",
+  "author": "boiawang <zhengwang2314@gmail.com> (http://www.boiajs.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-box/ngTopPage"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-box/ngTopPage/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.0.1",
