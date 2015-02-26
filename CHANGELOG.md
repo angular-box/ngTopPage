@@ -2,6 +2,7 @@
 
 * Add Changelog
 * Add dist dir
+* Change directive name
 
 ## 0.0.1
 

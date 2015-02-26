@@ -1,6 +1,6 @@
 angular.module 'ngTopPage', []
 
-.directive 'topBar', [() ->
+.directive 'ngTopBar', [() ->
   link = (scope, element, attrs) ->
     # scope.topBarId = 'top_page_' + Math.floor(Math.random(0, 1) * 899999 + 100000)
 
