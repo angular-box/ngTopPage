@@ -1,6 +1,7 @@
 # ngTopPage
 
 scroll to top of page
+[demo](http://angular-box.github.io/ngTopPage/)
 
 require jquery
 
@@ -47,6 +48,7 @@ gulp test
 
 * Add scroll bottom
 * Scroll anywhere
+* Delete jquery depen
 
 [travis-image]: https://travis-ci.org/angular-box/ngTopPage.svg
 [travis-url]: https://travis-ci.org/angular-box/ngTopPage
