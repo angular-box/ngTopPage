@@ -17,6 +17,9 @@
           step = Math.round(top / opts.speed);
           timer = 0;
           i = top;
+          if (step <= 0) {
+            step = 1;
+          }
           results = [];
           while (i > 0) {
             i = i - step;

@@ -21,6 +21,9 @@ angular.module 'ngTopPage', []
       timer = 0
       i = top
 
+      if step <= 0
+        step = 1
+
       while i > 0
         i = i - step
         timer += opts.speed
